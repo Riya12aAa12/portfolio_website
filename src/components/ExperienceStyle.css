@@ -1,0 +1,133 @@
+/* Experience.css */
+
+.experience-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px;
+  background: #000; /* Black background for contrast */
+  color: #f0f0f0; /* Light text color for readability */
+}
+
+.experience-item {
+  position: relative;
+  width: 80%; /* Adjust width as needed */
+  max-width: 800px;
+  background: linear-gradient(145deg, #2c2c2c, #1f1f1f); /* Gradient background */
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.6);
+  margin: 20px 0;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  padding: 20px;
+  color: #e0e0e0;
+  display: flex;
+  align-items: flex-start;
+}
+
+.experience-item:hover {
+  transform: scale(1.05); /* Slightly enlarge on hover */
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.8); /* Darker shadow on hover */
+}
+
+.experience-item.left {
+  flex-direction: row;
+  align-self: flex-start;
+}
+
+.experience-item.right {
+  flex-direction: row-reverse;
+  align-self: flex-end;
+}
+
+.experience-image {
+  width: 120px; /* Image size */
+  height: 120px; /* Fixed height to match width */
+  object-fit: cover;
+  border-radius: 8px;
+  margin-right: 20px; /* Space between image and content */
+  background: #333; /* Dark background for images */
+  padding: 10px; /* Add some padding for aesthetics */
+}
+
+.experience-content {
+  flex: 1;
+}
+
+.experience-title {
+  color: #ff4081; /* Bright color for titles */
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.experience-title:hover {
+  color: #e33371; /* Slightly darker shade for hover */
+}
+
+.experience-subtitle {
+  color: #b0bec5;
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+}
+
+.experience-role {
+  font-style: italic;
+  color: #90a4ae;
+  margin-bottom: 15px;
+}
+
+.experience-description {
+  list-style: disc;
+  padding-left: 20px;
+  margin-bottom: 20px;
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: max-height 0.3s ease, opacity 0.3s ease;
+}
+
+.experience-description.expanded {
+  max-height: 500px; /* Adjust as needed */
+  opacity: 1;
+}
+
+.experience-dates {
+  color: #cfd8dc;
+  font-size: 1rem;
+  margin-bottom: 20px;
+}
+
+.expand-button {
+  background-color: #ff4081; /* Highlight color */
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 24px;
+  cursor: pointer;
+  font-size: 1.1rem;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.expand-button:hover {
+  background-color: #e33371; /* Slightly darker shade for hover */
+  transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+@media (max-width: 768px) {
+  .experience-item {
+    width: 90%;
+    flex-direction: column;
+  }
+
+  .experience-item.left,
+  .experience-item.right {
+    flex-direction: column;
+  }
+
+  .experience-image {
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+}

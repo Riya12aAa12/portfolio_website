@@ -1,0 +1,93 @@
+.skill-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 50px;
+    margin: 50px 7vw 0px 15vw;
+  }
+  
+  .skill-container .skill-header {
+    font-size: 50px;
+    font-weight: 600;
+    color: #fff;
+    margin-bottom: 50px;
+  }
+  
+  .skill-container .skill-box {
+    width: 100%;
+  }
+  
+  .skill-box h2 {
+    color: #fff;
+    letter-spacing: 2px;
+    word-spacing: 3px;
+  }
+  
+  .skill-box .skillset {
+    margin: 25px 0 50px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 10px 25px;
+  }
+  
+  .skill-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .techLogo {
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    border-radius: 15px;
+    height: 120px;
+    width: auto;
+    padding: 30px;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+  }
+  
+  .skill-box .skillset abbr .techLogo:hover {
+    border: 2px solid rgb(255, 255, 255);
+    box-shadow: 0px 5px 20px 0px rgba(255, 255, 255, 0.4);
+    transform: scale(1.15);
+  }
+  
+  .skill-progress {
+    width: 100%;
+    background-color: #333;
+    border-radius: 5px;
+    margin-top: 10px;
+    overflow: hidden;
+  }
+  
+  .progress-bar {
+    height: 20px;
+    background-color: #f94892;
+    text-align: center;
+    line-height: 20px;
+    color: white;
+    border-radius: 5px;
+  }
+  
+  @media screen and (max-width: 1040px), (max-height: 550px) {
+    .skill-container {
+      margin: 50px 7vw 0px 20vw;
+    }
+  }
+  
+  @media screen and (max-width: 750px) {
+    .skill-container {
+      padding-top: 80px;
+      margin: 0 50px 0px;
+    }
+  
+    .techLogo {
+      height: 80px;
+      padding: 14px;
+    }
+  }
+  

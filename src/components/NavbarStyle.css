@@ -1,0 +1,314 @@
+/* General styles for the navbar */
+.header {
+    position: fixed;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background: rgba(0, 0, 0, 0.8); /* Semi-transparent background */
+    backdrop-filter: blur(5px); /* Blur effect */
+    z-index: 100;
+    transition: all 0.3s ease-in-out; /* Smooth transition */
+}
+
+/* Logo styling */
+.header .logo {
+    cursor: pointer;
+}
+
+.header .logo .logo-img {
+    font-size: 50px;
+    color:pink;
+    font-weight: 600;
+}
+
+.header .logo .logo-img span {
+    font-weight: 600;
+    color: #F94892;
+}
+
+.header .logo .logo-img .blink {
+    animation: blink 2s infinite;
+}
+
+/* Keyframes for blink animation */
+@keyframes blink {
+    0%, 100% {
+        color: #F94892;
+    }
+    50% {
+        color: transparent;
+    }
+}
+
+/* Nav menu styling */
+.header .nav-menu {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 2rem;
+    list-style: none;
+    margin: 0;
+}
+
+.header .nav-menu.active {
+    display: flex;
+}
+
+/* Nav link styling */
+.nav-menu li {
+    position: relative; /* Position for hover effect */
+}
+
+.nav-menu li .navLink {
+    font-size: 16px;
+    font-weight: 500;
+    color: #F94892;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    padding: 5px 10px;
+    border-radius: 5px; /* Rounded corners */
+ /* Gradient background */
+    backdrop-filter: blur(5px); /* Blur effect */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+/* Hover effect for nav links */
+.nav-menu li .navLink:hover {
+    color: black;
+    background: linear-gradient(45deg, #F94892, #ffe1a0);
+    transform: scale(1.1); /* Slightly enlarge */
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2); /* Enhanced shadow */
+}
+
+/* Social links styling */
+.header .social-links {
+    display: flex;
+    gap: 1rem;
+    position: relative; /* Ensure correct positioning */
+    top: -10px; /* Adjust to move up */
+}
+
+.header .social-links .social {
+    color: #fff;
+    transition: all 0.3s ease-in-out;
+}
+
+.header .social-links .social:hover {
+    transform: scale(1.2);
+    color: #F94892;
+}
+
+/* Hamburger menu styling for mobile */
+.header .hamburger {
+    display: none;
+}
+
+/* Responsive design for smaller screens */
+@media screen and (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .header .nav-menu {
+        flex-direction: column;
+        gap: 1rem;
+        display: none; /* Initially hide the menu */
+        width: 100%;
+    }
+
+    .header .nav-menu.active {
+        display: flex; /* Show the menu when active */
+    }
+
+    .header .hamburger {
+        display: initial;
+        align-self: flex-end;
+        cursor: pointer;
+    }
+
+    .header .social-links {
+        flex-direction: row;
+        width: 100%;
+        justify-content: space-between;
+        padding: 1rem 0;
+    }
+}
+
+.home {
+    position: relative; /* Ensure that child elements can be positioned relative to this container */
+}
+
+.home .content {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Align content to the left */
+    justify-content: center;
+    padding-left: 22vw; /* Adjust padding for content positioning */
+    margin-bottom: 50px;
+}
+
+.home .content .wrapper {
+    width: 100%;
+}
+
+.home .content .name {
+    white-space: nowrap;
+    font-size: 25px;
+    font-weight: 500;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    height: fit-content;
+    width: fit-content;
+    padding-left: 5px;
+}
+
+.home .content .staticTitle {
+    font-size: 100px;
+    font-weight: 500;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    height: fit-content;
+    width: fit-content;
+    padding-left: 5px; 
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); 
+}
+
+.home .content .staticTitle .hrLine {
+    border-bottom: 3px solid rgba(255, 255, 255, 0.6);
+    margin-left: 20px;
+    width: 20vw;
+}
+
+.home .content .dynamicTitle {
+    font-size: 100px;
+    font-weight: 500;
+    line-height: 100px;
+    width: fit-content;
+    padding-left: 5px; 
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); 
+}
+
+.home .content .dynamicTitle li {
+    width: 100%;
+    z-index: -1;
+}
+
+.home .content .dynamicTitle li span {
+    white-space: wrap;
+    background-image: linear-gradient(to right, #ffe1a0, #f67280, #F94892);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    z-index: -1;
+}
+
+.home .content .dynamicTitle li span::before {
+    content: '';
+    width: 100%;
+    height: 20%;
+    z-index: -1;
+}
+
+.home .content .btn {
+    display: inline-block;
+    background-color: black;
+    color: white;
+    padding: 10px 20px;
+    text-transform: uppercase;
+    font-weight: 500;
+    letter-spacing: 1px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    margin-top: 20px;
+    padding-left: 5px; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+}
+
+.home .content .btn:hover {
+    background-color: #c03672;
+    transform: translateY(-2px); 
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2); 
+}
+
+.mask .bg {
+    height: 80vh;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: -3;
+}
+
+.header .social-links {
+    width: 3rem;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    left: 6vw; 
+    top: calc(100vh - 150px); 
+    transform: translateY(-50%); 
+}
+
+.header .social-links .social {
+    margin: 5px 0;
+    width: 100%;
+    transition: all 0.5s ease-in-out;
+}
+
+.header .social-links .social:hover {
+    transform: scale(1.5);
+    fill: #F94892;
+}
+
+@media screen and (max-width: 950px) {
+    .mask .bg {
+        opacity: 40%;
+    }
+
+    .home .content .staticTitle {
+        font-size: 90px;
+    }
+
+    .home .content .dynamicTitle {
+        font-size: 90px;
+    }
+}
+
+@media screen and (max-width: 750px) {
+    .home .content {
+        align-items: center;
+        padding: 0 12vw;
+    }
+
+    .home .content .name {
+        font-size: 20px;
+        font-weight: 600;
+        line-height: 60px;
+    }
+
+    .home .content .staticTitle {
+        font-size: 12vw;
+    }
+
+    .home .content .staticTitle .hrLine {
+        width: 22vw;
+    }
+
+    .home .content .dynamicTitle {
+        font-size: 12vw;
+        line-height: 60px;
+    }
+
+    .home .content .btn {
+        font-size: 16px;
+    }
+
+    .header .social-links {
+        left: 4vw; 
+        top: calc(100vh - 150px); 
+    }
+}
